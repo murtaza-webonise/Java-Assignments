@@ -27,9 +27,14 @@ public class Duplicate {
            Iterator<Map.Entry<Integer, String>> iterator = Obj.entrySet().iterator();
              while(iterator.hasNext()){
                  Map.Entry<Integer, String> entry1 = iterator.next();
-                  if(temp.equalsIgnoreCase(entry1.getValue())&& key!=entry1.getKey()) {
-                   iterator.remove();
-                    
+                try {
+                    if(temp.equalsIgnoreCase(entry1.getValue())&& key!=entry1.getKey()) {
+                        iterator.remove();
+                    }
+                    throw new NullPointerException("value is null");
+                }
+                catch(Exception e) {
+                e.getMessage();	
                 }
          
                  
