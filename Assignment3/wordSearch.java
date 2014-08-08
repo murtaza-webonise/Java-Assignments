@@ -30,8 +30,8 @@ class search {
                 String[] words = line.split(" ");
 
                 for (String word : words) {
-                    if (word.equals("Murtaza")) {
-                      System.out.println("Obj found");
+                    if (word.equals("code;")) {
+                      System.out.println("String found");
                       flag=1;
                       break;
                     }
