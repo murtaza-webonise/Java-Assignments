@@ -5,11 +5,11 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class Duplicate {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         
         
-        Map <Integer, String> Obj = new ConcurrentHashMap();
-        Map <Integer, String> Obj1 = new HashMap();
+        Map <Integer, String> Obj = new ConcurrentHashMap<Integer, String>();
+       
         Obj.put(1,"I");
         Obj.put(2,"came");
         Obj.put(3,"I");
@@ -27,9 +27,16 @@ public class Duplicate {
            Iterator<Map.Entry<Integer, String>> iterator = Obj.entrySet().iterator();
              while(iterator.hasNext()){
                  Map.Entry<Integer, String> entry1 = iterator.next();
-                  if(temp.equalsIgnoreCase(entry1.getValue())&& key!=entry1.getKey()) {
+                try {
+                 if(temp.equalsIgnoreCase(entry1.getValue())&& key!=entry1.getKey()) {
                    iterator.remove();
+                  
                     
+                  }
+                 throw new NullPointerException("value is null");
+                }
+                catch(Exception e) {
+                	
                 }
          
                  
