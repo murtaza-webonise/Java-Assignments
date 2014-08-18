@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>userBean</servlet-name>
+        <servlet-class>bean.userBean</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userd</servlet-name>
+        <servlet-class>user.userd</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>userHandler</servlet-name>
+        <servlet-class>Handler.userHandler</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ConnectionProvider</servlet-name>
+        <servlet-class>ConnectionProvider.ConnectionProvider</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userBean</servlet-name>
+        <url-pattern>/userBean</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userd</servlet-name>
+        <url-pattern>/userd</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userHandler</servlet-name>
+        <url-pattern>/userHandler</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ConnectionProvider</servlet-name>
+        <url-pattern>/ConnectionProvider</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

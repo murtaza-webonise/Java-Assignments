@@ -1,0 +1,1 @@
+This Assignment contains JSP project used to develop a web appliaction to demonstrate CRUD operations on database.Here I have used bean class contains getter and setter methods as well as there is a one handler which manages the incoming request and redirect it to the particular web page.
